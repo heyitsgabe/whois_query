@@ -76,7 +76,7 @@ while i < len(domains_lst):
     url = 'https://www.whoisxmlapi.com/whoisserver/WhoisService?' + 'domainName=' + domains_lst[i] + '&apiKey=' + apiKey + "&outputFormat=JSON"
     print(url)    
     response = requests.get(url)
-    print(response.status_code)
+    print(response.json())
     i+=100
 else:
     print('exiting')
@@ -90,3 +90,9 @@ else:
 # response = requests.get(url)
 # print(response.status_code)
 # print(response.json())
+
+######################################################
+## notify email
+######################################################
+
+## use gmail API for email notifications
