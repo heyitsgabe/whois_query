@@ -115,9 +115,9 @@ else:
 
     print('sending email notification.....')
 
-    sender_add = 'gmm0812@.dev@gmail.com'
-    receiver_add = 'gmm0812.dev@gmail.com'
-    password = 'goo-cv$1012~RA'
+    sender_add = sys.argv[0]
+    receiver_add = sys.argv[1]
+    password = sys.argv[2] 
     
     smtp_server = smtplib.SMTP('smtp.gmail.com', 587)
     smtp_server.ehlo()
