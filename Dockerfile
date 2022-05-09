@@ -9,4 +9,4 @@ RUN pip3 install -r requirements.txt
 COPY . .
 
 # arguments are sender address, receive address, password
-CMD ["python3", "app.py", "gmm0812.dev@gmail.com", "", ""]
+CMD ["python3", "app.py", "", "", ""]
