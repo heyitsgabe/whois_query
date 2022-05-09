@@ -107,7 +107,7 @@ else:
             print('equal value compare')
         else:
             print('not equal value compare')
-            e = open('tmp_email_notify.txt', 'a')
+            e = open('tmp_email_notify.json', 'a')
             e.write('The following value has changed --- ' + domains_lst[d] + ': ' + dict_update.get(domains_lst[d]))
             e.close()
 
@@ -127,7 +127,7 @@ else:
 
     smtp_server.login(sender_add, password)
 
-    tmp_eml = open('tmp_email_notify.txt', 'r')
+    tmp_eml = open('tmp_email_notify.json', 'r')
     msg = str(tmp_eml.read())
     tmp_eml.close()
 
@@ -135,8 +135,8 @@ else:
     
     print('message is sent.....')
 
-    if os.path.exists('tmp_email_notify.txt'):
-        os.remove('tmp_email_notify.txt')
+    if os.path.exists('tmp_email_notify.json'):
+        os.remove('tmp_email_notify.json')
     else:
         print('files deleted')
 
@@ -218,7 +218,7 @@ while r < 1:
                 print('equal value compare')
             else:
                 print('not equal value compare')
-                e = open('tmp_email_notify.txt', 'a')
+                e = open('tmp_email_notify.json', 'a')
                 e.write('The following value has changed --- ' + domains_lst[d] + ': ' + dict_update.get(domains_lst[d]))
                 e.close()
 
@@ -238,7 +238,7 @@ while r < 1:
 
         smtp_server.login(sender_add, password)
 
-        tmp_eml = open('tmp_email_notify.txt', 'r')
+        tmp_eml = open('tmp_email_notify.json', 'r')
         msg = str(tmp_eml.read())
         tmp_eml.close()
 
@@ -246,8 +246,8 @@ while r < 1:
         
         print('message is sent.....')
 
-        if os.path.exists('tmp_email_notify.txt'):
-            os.remove('tmp_email_notify.txt')
+        if os.path.exists('tmp_email_notify.json'):
+            os.remove('tmp_email_notify.json')
         else:
             print('files deleted')
 
